@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
                         return TodoItem(
                           todo: todo,
                           onCheckboxChanged: (value) {
-                            final newTodo = TodoModel(
+                            TodoModel(
                                 title: todo.title, isCompleted: value ?? false);
                           },
                           onDelete: () =>
@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
                     );
                   }
                 } else {
-                  return const Center(child: Text('Error Loading todos'));
+                  return const Center(child: Text('No todos yet!'));
                 }
               },
             ),
